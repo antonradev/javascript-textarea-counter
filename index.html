@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript TextArea with characters counter</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="description" content="Plain JavaScript script for characters counter in textarea element. Two functions - count to number from 0 and reverse count from number to zero. It could be implemented for any others texts input elements" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/main.css">
+    </head>
+
+    <body>
+
+        <h2 class="jsui-demo-heading">JavaScript TextArea with characters counter - Demo page</h2>
+
+        <form action="forms.html" method="get" class="demo-form">
+
+            <div class="jsui-form-controll">
+                <h5>Counts characters from 0 to 800</h5>
+                <div id="textareaMessage"></div>
+                <textarea id="myTextarea" placeholder=""></textarea>
+                <div class="chars">
+                    Characters: <span id="chars">0</span>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="jsui-form-controll">
+                <h5>Counts characters from 800 to 0</h5>
+                <div id="textareaMessageTwo"></div>
+                <textarea id="myTextareaTwo" placeholder=""></textarea>
+                <div class="chars">
+                    Characters: <span id="charsTwo">800</span>
+                </div>
+            </div>
+            
+            <br><br>
+            
+            <div class="jsui-form-controll">
+                <a href="http://jui.uxpd.net" style="font-size: .8em;">JUI - jQuery Plugins and JavaScript Projects</a>
+            </div>
+
+        </form>
+
+        <script src="js/jsui.textarea-counter.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            document.getElementById("myTextarea").addEventListener("keyup", function() {
+                countCharactersTextarea("myTextarea");
+            }, true);
+            document.getElementById("myTextarea").addEventListener("keydown", function() {
+                countCharactersTextarea("myTextarea");
+            }, true);
+
+
+            document.getElementById("myTextareaTwo").addEventListener("keyup", function() {
+                countBackCharactersTextarea("myTextareaTwo");
+            }, true);
+            document.getElementById("myTextareaTwo").addEventListener("keydown", function() {
+                countBackCharactersTextarea("myTextareaTwo");
+            }, true);
+        </script>
+    </body>
+</html>
